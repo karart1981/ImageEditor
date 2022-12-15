@@ -1,0 +1,122 @@
+:root{
+    --purple-color: #512da8;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-height: 100%;
+    height: 100%; 
+	user-select: none;
+}
+#title{
+	line-height: 55px;
+}
+
+#file-form {
+    width: 40%;
+    margin: 0 auto;
+}
+#file-form .btn:hover {
+    box-shadow: inset 0 0 15px white;
+}
+#file-form .btn:active {
+    box-shadow: inset 0 0 15px black;
+}
+.wrapper {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas: 
+        'reset canvas download'
+        'cont-bri canvas sat-vib';
+}
+#imageCnv {
+    width: 100%;
+    background: linear-gradient(#aca, #bada55);
+    background: linear-gradient( #3637958f, rgba(0, 93, 151, 0.637));
+    border-radius: 20px;
+}
+.canvas {
+    width: 95%;
+    margin: 0 auto;
+    grid-area: canvas;
+}
+.reset{
+    grid-area: reset;
+}
+.download {
+    grid-area: download;
+}
+.cont-bri {
+    grid-column: span 1;
+    grid-area: cont-bri;
+}
+.sat-vib {
+    grid-area: sat-vib;
+    grid-column: span 1;
+
+}
+input[type=range]::-webkit-slider-thumb {
+    background-color: var(--purple-color);
+}
+input[type=range]::-moz-range-thumb {
+    background-color: var(--purple-color);
+}
+  input[type=range]::-ms-thumb {
+    background-color: var(--purple-color);
+}
+input[type=range] + .thumb {
+    background-color: var(--purple-color);
+}
+input[type=range] + .thumb.active .value {
+    font-size: 1.1rem;
+    height: 40px;
+    width: 40px;
+    margin: 0 0 0 -10px;
+    top: -25px;
+}
+button {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.col{
+	margin-bottom:10px;
+}
+p {
+    font-size: 1.2rem;
+}
+p span {
+    font-size: 1.3rem;
+    color: var(--purple-color);
+}
+footer a {
+    color: var(--purple-color);
+}
+@media screen and (max-width: 450px) {
+  .wrapper  {
+    display: block;
+  }
+}
+@media screen and (max-width: 992px) {
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'canvas canvas'
+        'reset download'
+        'cont-bri sat-vib';
+    }
+    .canvas {
+        width: 100%;
+    }
+    .download, .reset {
+        margin: 10px 0;
+    }
+}

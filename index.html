@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Editor</title>
+	<link rel="shortcut icon" href="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-png-icon-blue-pencil-18.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+</head>
+<body>
+	<nav>
+        <div class="nav-wrapper deep-purple darken-2">
+            <h4 id="title" align="center">Image Filter</h4>
+        </div>
+    </nav>  
+    <form id="file-form">
+        <div class="file-field input-field">
+           <div class="btn deep-purple darken-2">
+              <span>File</span>
+              <input type="file" id="upload">
+           </div>
+           <div class="file-path-wrapper">
+             <input class="file-path validate" type="text" placeholder="Upload Image">
+           </div>
+        </div>
+    </form>
+    <div class="wrapper">
+        <div class="canvas">
+            <canvas id="imageCnv">
+            </canvas>
+        </div> 
+		<!-- canvas -->
+        <div class="reset center-align">
+            <button class="btn waves-effect waves-light deep-purple darken-2" id="reset-btn">Reset</button>
+        </div>
+        <div class="row center-align cont-bri">
+          <div class="col s12 m12 brightness">
+            <p>Brightness 
+				<span class="span">
+					0
+                </span>
+			</p>
+            <form>
+               <p class="range-field">
+                   <input type="range" id="brightness" min="-50" max="50" />
+               </p>
+            </form>
+          </div>
+          <div class="col s12 m12 ">
+                <p>Noise <span class="span">0</span></p>
+                <form>
+                    <p class="range-field ">
+                        <input type="range" id="noise" min="0" max="100" value="0"/> 
+                    </p>
+                </form>
+          </div>
+          <div class="col s12 m12 sepia">
+             <p>Sepia 
+				 <span class="span">
+					 0
+				 </span>
+			 </p>
+             <form>
+                 <p class="range-field">
+                     <input type="range" id="sepia" min="0" max="100" value="0"/>
+                 </p>
+             </form>
+          </div>
+          <div class="col s12 m12">
+            <button class="btn waves-effect waves-light deep-purple darken-2" id="love">Love</button>
+          </div>
+          <div class="col s12 m12">
+            <button class="btn waves-effect waves-light deep-purple darken-2" id="sun-rise">Sun Rise</button>
+          </div>
+          <div class="col s12 m12">
+            <button class="btn waves-effect waves-light deep-purple darken-2" id="old-paper">Old Paper</button>
+          </div>
+        </div> <!-- row -->
+        <div class="download center-align">
+           <button class="btn waves-effect waves-light deep-purple darken-2" id="download-btn">Download</button>
+        </div> 
+        <div class="row center-align sat-vib">
+            <div class="col s12 m12 saturation">
+                <p>Saturation <span class="span">0</span></p>
+                <form>
+                  <p class="range-field ">
+                    <input type="range" class="" id="saturation" min="-100" max="100" />
+                  </p>
+                </form>
+            </div>
+            <div class="col s12 m12 vibrance">
+                <p>Vibrance <span class="span">0</span></p>
+                <form>
+                    <p class="range-field">
+                        <input type="range" id="vibrance" min="-100" max="100" />
+                    </p>
+                </form>
+            </div>
+            <div class="col s12 m12 hue">
+                <p>Hue <span class="span">0</span></p>
+                <form>
+                    <p class="range-field">
+                        <input type="range" id="hue" min="0" max="100" value="0" />
+                    </p>
+                </form>
+            </div>
+            <div class="col s12 m12">
+                <button class="btn waves-effect waves-light deep-purple darken-2" id="orange-peel">Orange Peel</button>
+            </div>
+            <div class="col s12 m12">
+                <button class="btn waves-effect waves-light deep-purple darken-2" id="lomo">Lomo</button>
+            </div>
+            <div class="col s12 m12">
+                <button class="btn waves-effect waves-light deep-purple darken-2" id="purple">Purple</button>
+            </div>
+        </div> <!-- row -->
+        
+    </div>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+</html>
